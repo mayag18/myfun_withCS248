@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="static/styles_c.css">
+</head>
+<body>
+    <h1>Wellesley Dining Halls</h1>
+    <div class="gallery">
+        {% for image in images %}
+        <div class="image-container">
+            <img src="{{ image_folder }}/{{ image }}" alt="{{ captions[image] }}">
+            <div class="caption">{{ captions[image] }}</div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
